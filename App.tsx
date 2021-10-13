@@ -48,16 +48,12 @@ const App = () => {
             <CustomToolbar/>
 
             <Provider store={store}>
-                <Movies/>
+                <AppNavigator
+                    ref={navigatorRef => {
+                        NavigationService.setTopLevelNavigator(navigatorRef);
+                    }}
+                />
             </Provider>
-
-            {/*<Provider store={store}>*/}
-            {/*    <AppNavigator*/}
-            {/*        ref={navigatorRef => {*/}
-            {/*            NavigationService.setTopLevelNavigator(navigatorRef);*/}
-            {/*        }}*/}
-            {/*    />*/}
-            {/*</Provider>*/}
 
         </SafeAreaView>
     );
