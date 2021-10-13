@@ -47,6 +47,7 @@ const App = () => {
                 barStyle={isDarkMode ? "light-content" : "dark-content"}/>
             <CustomToolbar/>
 
+
             <Provider store={store}>
                 <AppNavigator
                     ref={navigatorRef => {
